@@ -147,7 +147,7 @@ breakout = function(Z, min.size = 30, method = 'amoc', ...){
 				df2 = data.frame(Z$timestamp[v[j]], Z$timestamp[v[j]], -Inf, M)
 				names(df2) = c('x','xend','y','yend')
 				g = g + ggplot2::geom_segment(data=df2,ggplot2::aes(x=x,y=y,xend=xend,yend=yend,color='2'),linetype=2,size=1.2)
-				g = g + ggplot2::guides(color=FALSE)
+				g = g + ggplot2::guides(color="none")
 			}
 		}
 		if(dateTime)
